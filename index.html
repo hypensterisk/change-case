@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Change Case</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0-beta/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="modal" class="modal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="input-group mb-2">
+              <label class="input-group-text">Method</label>
+              <select id="method" class="form-select"></select>
+            </div>
+            <div class="input-group mb-2">
+              <input id="output" class="form-control" type="text" readonly>
+              <button id="backspace" type="button" class="btn btn-danger">
+                <i class="fa-solid fa-backspace"></i>
+              </button>
+              <button id="copy" type="button" class="btn btn-primary">
+                <i class="fa-solid fa-copy"></i>
+              </button>
+            </div>
+            <div class="input-group mb-2">
+              <span class="input-group-text">
+                <i class="fa-solid fa-book"></i>
+              </span>
+              <input id="input" class="form-control" type="text">
+            </div>
+            <div id="list" class="list-group"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <template id="option">
+      <option></option>
+    </template>
+    <template id="item">
+      <button type="button" class="list-group-item list-group-item-action"></button>
+    </template>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
